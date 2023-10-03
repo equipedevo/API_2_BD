@@ -2,7 +2,6 @@ create database hermezBD;
 
 use hermezBD;
 
-drop database hermezBD;
 /*
 ////////////////////
 ///////TABELAS//////
@@ -16,7 +15,7 @@ emp_senha binary(72) not null
 );
 
 create table Cargo(
-car_cod int auto_increment primary key,
+car_cod int primary key,
 car_desc varchar(23)
 );
 
