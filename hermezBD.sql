@@ -11,7 +11,8 @@ create table Empresa(
 emp_cod int auto_increment primary key,
 emp_nome varchar(20) not null,
 emp_cnpj varchar(30) not null,
-emp_senha binary(72) not null
+emp_senha binary(72) not null,
+emp_email varchar(48) not null
 );
 
 create table Cargo(
@@ -28,6 +29,7 @@ fun_celular varchar(12) not null,
 emp_senha binary(72) not null,
 car_cod int,
 emp_cod int,
+fun_dataNasc date,
 foreign key(emp_cod) references Empresa(emp_cod),
 foreign key(car_cod) references Cargo(car_cod)
 -- key emp_cod(emp_cod)
