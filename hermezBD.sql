@@ -1,3 +1,5 @@
+
+
 create database hermezBD;
 
 use hermezBD;
@@ -59,6 +61,12 @@ sta_valor int
 constraint sta_valor_um_a_seis CHECK(sta_valor between 1 and 6)
 );
 
+create table Tipo_Servico(
+ser_cod int primary key,
+ser_nome varchar(31),
+ser_prioridade int
+);
+
 create table Chamado(
 cha_cod int auto_increment primary key,
 cha_desc varchar(690) not null,
@@ -77,3 +85,8 @@ foreign key(sta_cod) references Status(sta_cod),
 -- foreign key (tec_cod) references Tecnico(tec_cod)
 foreign key(tec_cod) references Funcionario(fun_cod)
 );
+
+alter table Chamado drop column cha_tipoServ;
+
+alter table Chamado add ser_cod int;
+alter table Chamado add foreign key (ser_cod) references Tipo_Servico(ser_cod);
