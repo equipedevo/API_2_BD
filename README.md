@@ -46,6 +46,20 @@
 <details>
 <summary>Chamado</summary>
 
+| Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                                 |
+|:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:-----------------------------------------:|
+| cha_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação do chamado        |
+| cha_desc        | VARCHAR       | 690         | NOT NULL     | N/A            | Descrição do chamado                      |
+| cha_dataInicio  | DATE          | Default     | NOT NULL     | N/A            | Data que o chamado foi aberto             |
+| cha_dataFim     | DATE          | Default     | NOT NULL     | N/A            | Data que o chamado foi fechado            |
+| cha_local       | VARCHAR       | 20          |              | N/A            | Local do problema do chamado              |
+| cha_titulo      | VARCHAR       | 72          | NOT NULL     | N/A            | Titulo do chamado                         |
+| fun_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do funcionario que abriu o chamado |
+| sta_cod         | INT           | Default     | FK, 0 <=x<=6 | N/A            | Código do status do chamado               |
+| tec_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do técnico responsável pelo chamado|
+| cha_prioridade  | INT           | Default     | 1 <= X <= 4  | N/A            | Prioridade do chamado                     |
+| ser_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do tipo de serviço do chamado      |
+
 </details>
 
 
