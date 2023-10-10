@@ -2,6 +2,7 @@
 
 <details>
 <summary>Empresa</summary>
+
 | Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                           |
 |:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:-----------------------------------:|
 | emp_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação da empresa  |
@@ -15,6 +16,7 @@
 
 <details>
 <summary>Funcionario</summary>
+
 | Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                               |
 |:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:---------------------------------------:|
 | fun_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação do funcionário  |
@@ -32,6 +34,11 @@
 
 <details>
 <summary>Cargo</summary>
+
+| Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                               |
+|:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:---------------------------------------:|
+| car_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação do cargo        |
+| car_desc        | VARCHAR       | 23          | NOT NULL     | N/A            | Nome do cargo do site (Adminitrstador, Tecnico e Padrão)|
 
 </details>
 
