@@ -28,7 +28,7 @@ create table Funcionario(
     fun_funcao varchar(20) not null,
     fun_email varchar(30) not null,
     fun_celular varchar(12) not null,
-    emp_senha varchar(60) not null,
+    fun_senha varchar(60) not null,
     car_cod int,
     emp_cod int,
     fun_dataNasc date,
