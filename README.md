@@ -1,5 +1,7 @@
 # Dicionário de Dados
 
+## Explicação dos campos das tabelas feitas até o momento do banco de dados do site Hermez.
+
 <details>
 <summary>Empresa</summary>
 
@@ -55,7 +57,7 @@
 | cha_local       | VARCHAR       | 20          |              | N/A            | Local do problema do chamado              |
 | cha_titulo      | VARCHAR       | 72          | NOT NULL     | N/A            | Titulo do chamado                         |
 | fun_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do funcionario que abriu o chamado |
-| sta_cod         | INT           | Default     | FK, 0 <=x<=6 | N/A            | Código do status do chamado               |
+| sta_cod         | INT           | Default     | FK, 0<=x<=6  | 0              | Código do status do chamado               |
 | tec_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do técnico responsável pelo chamado|
 | cha_prioridade  | INT           | Default     | 1 <= X <= 4  | N/A            | Prioridade do chamado                     |
 | ser_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do tipo de serviço do chamado      |
@@ -65,6 +67,12 @@
 
 <details>
 <summary>Status</summary>
+
+| Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                                 |
+|:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:-----------------------------------------:|
+| sta_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação do status         |
+| sta_nome        | VARCHAR       | 15          | NOT NULL     | N/A            | Nome do status que um chamado pode estar  |
+| sta_valor       | INT           | Default     | 0 <= x <= 6  | 0              | Valor do status em número                 |
 
 </details>
 
