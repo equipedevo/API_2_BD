@@ -59,7 +59,7 @@
 | fun_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do funcionario que abriu o chamado |
 | sta_cod         | INT           | Default     | FK, 0<=x<=6  | 0              | Código do status do chamado               |
 | tec_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do técnico responsável pelo chamado|
-| cha_prioridade  | INT           | Default     | 1 <= X <= 4  | N/A            | Prioridade do chamado                     |
+| cha_prioridade  | INT           | Default     | 1 <= X <= 4  | N/A            | Número da prioridade do chamado           |
 | ser_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do tipo de serviço do chamado      |
 
 </details>
@@ -79,6 +79,12 @@
 
 <details>
 <summary>Tipo_Servico</summary>
+
+| Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                                            |
+|:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:----------------------------------------------------:|
+| ser_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação do tipo de serviço           |
+| ser_nome        | VARCHAR       | 31          | NOT NULL     | N/A            | Nome do tipo de serviço que um chamado pode ter      |
+| ser_prioridade  | INT           | Default     | 1 <= x <= 4  | 2              | Número da prioridade do tipo de serviço              |
 
 </details>
 
