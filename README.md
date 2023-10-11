@@ -72,7 +72,7 @@
 |:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:-----------------------------------------:|
 | sta_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação do status         |
 | sta_nome        | VARCHAR       | 15          | NOT NULL     | N/A            | Nome do status que um chamado pode estar  |
-| sta_valor       | INT           | Default     | 0 <= x <= 6  | 0              | Valor do status em número                 |
+| sta_valor       | INT           | Default     | 1 <= x <= 6  | 0              | Valor do status em número                 |
 
 </details>
 
