@@ -102,4 +102,4 @@ alter table Chamado add foreign key (emp_cod) references Empresa(emp_cod);
 
 insert into Status values (1, "Aberto", 1), (2,"Em andamento",2), (3,"Reaberto",3), (4,"Cancelado",4), (5,"Concluído",5), (6,"Fechado",6);
 
-insert into Tipo_Servico
+insert into Tipo_Servico values (1,"manuntenção de cpu",2),(2,"consertar sua placa-mãe",3),(3,"reestabelecer internet",4),(4,"computador quebrou",4),(5,"computador lento",1);
