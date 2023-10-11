@@ -90,3 +90,6 @@ alter table Chamado drop column cha_tipoServ;
 
 alter table Chamado add ser_cod int;
 alter table Chamado add foreign key (ser_cod) references Tipo_Servico(ser_cod);
+
+alter table Chamado add emp_cod int;
+alter table Chamado add foreign key (emp_cod) references Empresa(emp_cod);
