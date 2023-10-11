@@ -93,3 +93,13 @@ alter table Chamado add foreign key (ser_cod) references Tipo_Servico(ser_cod);
 
 alter table Chamado add emp_cod int;
 alter table Chamado add foreign key (emp_cod) references Empresa(emp_cod);
+
+/*
+////////////////////
+///////INSERT///////
+////////////////////
+*/
+
+insert into Status values (1, "Aberto", 1), (2,"Em andamento",2), (3,"Reaberto",3), (4,"Cancelado",4), (5,"Concluído",5), (6,"Fechado",6);
+
+insert into Tipo_Servico
