@@ -25,7 +25,7 @@
 | fun_nome        | VARCHAR       | 30          | NOT NULL     | N/A            | Nome do funcionário                     |
 | fun_funcao      | VARCHAR       | 15          | NOT NULL     | N/A            | Função do funcionário na empresa        |
 | fun_email       | VARCHAR       | 30          | NOT NULL     | N/A            | Email do funcionário                    |
-| fun_celular     | VARCHAR       | 12          | NOT NULL     | N/A            | Celular do funcionário                  |
+| fun_celular     | VARCHAR       | 16          | NOT NULL     | N/A            | Celular do funcionário                  |
 | fun_senha       | BINARY        | 72          | NOT NULL     | N/A            | Senha do funcionário                    |
 | emp_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código da empresa                       |
 | car_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do cargo                         |
@@ -57,9 +57,9 @@
 | cha_local       | VARCHAR       | 20          |              | N/A            | Local do problema do chamado              |
 | cha_titulo      | VARCHAR       | 72          | NOT NULL     | N/A            | Titulo do chamado                         |
 | fun_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do funcionario que abriu o chamado |
-| sta_cod         | INT           | Default     | FK, 0<=x<=6  | 0              | Código do status do chamado               |
+| sta_cod         | INT           | Default     | FK, 1<=x<=6  | 1              | Código do status do chamado               |
 | tec_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do técnico responsável pelo chamado|
-| cha_prioridade  | INT           | Default     | 1 <= X <= 4  | N/A            | Número da prioridade do chamado           |
+| cha_prioridade  | INT           | Default     | 1 <= X <= 4  | 2              | Número da prioridade do chamado           |
 | ser_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do tipo de serviço do chamado      |
 
 </details>
