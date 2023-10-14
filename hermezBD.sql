@@ -1,5 +1,3 @@
-
-
 create database hermezBD;
 
 use hermezBD;
@@ -27,7 +25,7 @@ create table Funcionario(
     fun_nome varchar(30) not null,
     fun_funcao varchar(20) not null,
     fun_email varchar(30) not null,
-    fun_celular varchar(12) not null,
+    fun_celular varchar(15) not null,
     fun_senha varchar(60) not null,
     car_cod int,
     emp_cod int,
@@ -93,6 +91,9 @@ alter table Chamado add foreign key (ser_cod) references Tipo_Servico(ser_cod);
 
 alter table Chamado add emp_cod int;
 alter table Chamado add foreign key (emp_cod) references Empresa(emp_cod);
+
+alter table Chamado alter sta_cod set default 1;
+alter table Chamado alter cha_prioridade set default 2;
 
 /*
 ////////////////////
