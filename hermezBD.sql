@@ -93,6 +93,10 @@ alter table Chamado add foreign key (emp_cod) references Empresa(emp_cod);
 alter table Chamado alter sta_cod set default 1;
 alter table Chamado alter cha_prioridade set default 2;
 
+alter table Chamado add ct_cod int;
+alter table Chamado add foreign key (ct_cod) references Chat(ct_cod);
+-- alter table Chamado add key ct_cod(ct_cod);
+
 alter table Chamado add arq_cod int;
 alter table Chamado add foreign key (arq_cod) references Arquivo(arq_cod);
 -- alter table Chamado add key arq_cod(arq_cod);
