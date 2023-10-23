@@ -112,7 +112,6 @@ arq_cod int primary key auto_increment,
 arq_caminho varchar(200) not null
 );
 
-
 create table Mensagem(
 msg_cod int primary key auto_increment,
 msg_texto varchar(500) not null,
@@ -126,6 +125,8 @@ foreign key (ct_cod) references Chat(ct_cod),
 foreign key (arq_cod) references Arquivo(arq_cod)
 -- key arq_cod(arq_cod) 
 );
+
+alter table Mensagem add msg_dataEnv datetime;
 
 /*
 ////////////////////
