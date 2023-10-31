@@ -130,6 +130,35 @@ alter table Mensagem add msg_dataEnv datetime;
 
 /*
 ////////////////////
+/////PROCEDURE//////
+////////////////////
+*/
+DELIMITER //
+create procedure criar_chamado(
+    IN cha_desc_p varchar(690),
+    IN cha_local_p varchar(32),
+    IN cha_titulo_p varchar(30),
+    IN fun_cod_p int,
+    IN emp_cod_p int,
+    IN arq_cod_p int
+)
+BEGIN
+    -- Insira um novo registro na tabela Chat
+    INSERT INTO Chat (ct_status) VALUES (TRUE);
+
+    -- Obtenha o código do novo registro inserido na tabela Chat
+    SET @n_cod_chat = LAST_INSERT_ID();
+
+    -- Insira um novo registro na tabela Chamado e associe-o ao registro na tabela Chat
+    INSERT INTO Chamado (cha_desc, cha_dataInicio, cha_local, cha_titulo, fun_cod, sta_cod, cha_prioridade, ser_cod, emp_cod, arq_cod, ct_cod) 
+    VALUES (cha_desc_p, now(), cha_local_p, cha_titulo_p, fun_cod_p, 1, 2, 6, emp_cod_p, arq_cod_p, @n_cod_chat);
+    -- now --> convert_tz(now(),"+00:00","-03:00")
+END;
+//
+DELIMITER ;
+
+/*
+////////////////////
 ///////INSERT///////
 ////////////////////
 */
