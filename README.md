@@ -91,22 +91,37 @@
 
 </details>
 
-<!-- <details>
+
+<details>
+<summary>Arquivo</summary>
+
+| Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                               |
+|:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:---------------------------------------:|
+| arq_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação do arquivo      |
+| arq_caminho     | VARCHAR       | 200         | NOT NULL     | N/A            | Link de onde a imagem está armazenada   |
 
 </details>
 
+
 <details>
+<summary></summary>
 
 </details>
 
+
 <details>
+<summary></summary>
 
 </details>
 
+
 <details>
+<summary></summary>
 
 </details>
 
-<details>
 
-</details> -->
+<details>
+<summary></summary>
+
+</details>
