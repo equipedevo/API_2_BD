@@ -104,7 +104,12 @@
 
 
 <details>
-<summary></summary>
+<summary>Chat</summary>
+
+| Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                               |
+|:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:---------------------------------------:|
+| ct_cod          | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação do chat         |
+| ct_status       | tinyint       | 1           |              | 1              | Status se o chat está aberto (1) ou fechado(0)|
 
 </details>
 
