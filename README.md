@@ -52,8 +52,8 @@
 |:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:-----------------------------------------:|
 | cha_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação do chamado        |
 | cha_desc        | VARCHAR       | 690         | NOT NULL     | N/A            | Descrição do chamado                      |
-| cha_dataInicio  | DATE          | Default     | NOT NULL     | N/A            | Data que o chamado foi aberto             |
-| cha_dataFim     | DATE          | Default     | NOT NULL     | N/A            | Data que o chamado foi fechado            |
+| cha_dataInicio  | DATETIME      | Default     | NOT NULL     | N/A            | Data e horário que o chamado foi aberto   |
+| cha_dataFim     | DATETIME      | Default     |              | N/A            | Data e horário que o chamado foi fechado  |
 | cha_local       | VARCHAR       | 32          |              | N/A            | Local do problema do chamado              |
 | cha_titulo      | VARCHAR       | 30          | NOT NULL     | N/A            | Titulo do chamado                         |
 | fun_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do funcionario que abriu o chamado |
@@ -115,7 +115,16 @@
 
 
 <details>
-<summary></summary>
+<summary>Mensagem</summary>
+
+| Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                                 |
+|:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:-----------------------------------------:|
+| msg_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação da mensagem       |
+| msg_texto       | VARCHAR       | 500         | NOT NULL     | N/A            | Texto contido na mensagem                 |
+| fun_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código do funcionario que enviou a mensagem|
+| ct_cod          | INT           | Default     | FK, NOT NULL | N/A            | Código do chat que a mensgem foi enviada  |
+| arq_cod         | INT           | Default     | FK           | N/A            | Código da imagem anexada na mensagem      |
+| msg_dataEnv     | DATETIME      | Default     | NOT NULL     | N/A            | Data e horário que a mensagem foi enviada |
 
 </details>
 
