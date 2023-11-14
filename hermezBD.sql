@@ -134,6 +134,10 @@ per_desc varchar(60) not null,
 per_resposta varchar(80) not null
 );
 
+alter table Perguntas add emp_cod int;
+alter table Perguntas add foreign key (emp_cod) references Empresa(emp_cod);
+-- alter table Perguntas add key emp_cod(emp_cod);
+
 /*
 ////////////////////
 ///////INSERT///////
