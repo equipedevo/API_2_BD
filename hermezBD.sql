@@ -129,7 +129,7 @@ foreign key (arq_cod) references Arquivo(arq_cod)
 alter table Mensagem add msg_dataEnv datetime;
 
 create table Perguntas(
-per_cod int primary key,
+per_cod int auto_increment primary key,
 per_desc varchar(60) not null,
 per_resposta varchar(80) not null
 );
