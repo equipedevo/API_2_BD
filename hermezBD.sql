@@ -130,8 +130,8 @@ alter table Mensagem add msg_dataEnv datetime;
 
 create table Perguntas(
 per_cod int auto_increment primary key,
-per_desc varchar(60) not null,
-per_resposta varchar(80) not null
+per_desc varchar(120) not null,
+per_resposta varchar(160) not null
 );
 
 alter table Perguntas add emp_cod int;
