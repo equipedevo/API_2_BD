@@ -129,13 +129,14 @@
 </details>
 
 
-<!-- <details>
-<summary></summary>
+<details>
+<summary>Perguntas</summary>
+
+| Nome Dos Campos | Tipo de dados | Comprimento | Restrições   | Valor padrão   | Descrição                                 |
+|:---------------:|:-------------:|:-----------:|:------------:|:--------------:|:-----------------------------------------:|
+| per_cod         | INT           | Default     | PK, NOT NULL | auto_increment | Número de identificação da pergunta       |
+| per_desc        | VARCHAR       | 120         | NOT NULL     | N/A            | Pergunta                                  |
+| per_resposta    | VARCHAR       | 160         | NOT NULL     | N/A            | Resposta para respectiva pergunta         |
+| emp_cod         | INT           | Default     | FK, NOT NULL | N/A            | Código da empresa responsável pela pergunta|
 
 </details>
-
-
-<details>
-<summary></summary>
-
-</details> -->
